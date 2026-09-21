@@ -1,14 +1,12 @@
 # Simplified Validation Pipeline (Cafe Orders)
 
-A cut-down version of the NIHR INF annual reporting validation tool. It uses the same pipeline logic (fuzzy header detection → column mapping → per-column rules → value standardisation → conditional rules → colour-coded cells + audit report → parallel file processing) on a small 2-tab, 11-column dataset.
-
-The data is generated rather than downloaded. The schema is modelled on Kaggle's *Cafe Sales – Dirty Data for Cleaning Training*, with deliberate mess added so every rule is exercised.
+This pipeline provides an automated approach for conditional validation of spreadsheets.
+To demo the pipeline's features, Cafe sales data was edited to provide a messy data set for testing
 
 ## Run it
 
 ```bash
 pip install -r requirements.txt
-python generate_messy_data.py   # -> input/Cafe_Orders_A.xlsx, input/Cafe_Orders_B.xlsx, input/answer_key.csv
 python main.py                  # -> output/<file>.xlsx (labelled + reformatted), reports/Validation_Report_*.xlsx
 python check_against_key.py     # compares output/ with the answer key
 ```
