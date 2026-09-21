@@ -62,10 +62,3 @@ The files in `input/` are never modified, so you can re-run as often as you like
 | Green `50C878` | Invalid format (number, date, email), out of range, or broken date/zero rule |
 | Light blue `00FFFF` | Value not in the dropdown, or not allowed for its parent column |
 
-## Differences from the full pipeline
-
-- A single rule set: there is no scheme switching and no special tabs (Biosamples, Publications and so on).
-- The hard-coded per-list fixes have moved into `STANDARDISE_VALUES` in `config.py`.
-- Conditional rules run once per row after all columns are cleaned. In the full pipeline they run inside the per-column loop.
-- Validated copies are written to `output/` instead of overwriting the input.
-- The report includes the row number for each issue.
