@@ -1,0 +1,83 @@
+File,Tab,Row,Column,Fault,Injected Value,Expected Outcome
+Cafe_Orders_A.xlsx,Store Details,3,Store Name (B3),store name case,camden cafe,standardised -> Camden Cafe
+Cafe_Orders_A.xlsx,Orders,12,Payment Method,value not in dropdown,Cheque,flagged 00FFFF
+Cafe_Orders_A.xlsx,Orders,13,Quantity,quantity outside 0-50,120,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,14,Refund Date,refund date before order date (date_not_before),2024/01/22,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,18,Quantity,non-numeric quantity,three,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,19,Quantity,Cancelled with a quantity (blanks_or_zero_list),2,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,20,Order Date,alternative date format,2023-01-20 00:00:00,standardised -> 2023/01/20
+Cafe_Orders_A.xlsx,Orders,21,Item,misspelled dropdown value,Smoothy,flagged 00FFFF
+Cafe_Orders_A.xlsx,Orders,23,Unit Price,non-numeric price,ERROR,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,26,Item,misspelled dropdown value,Te,flagged 00FFFF
+Cafe_Orders_A.xlsx,Orders,28,Item Category,dropdown variant,beverage,standardised -> Drink
+Cafe_Orders_A.xlsx,Orders,30,Item,misspelled dropdown value,Te,flagged 00FFFF
+Cafe_Orders_A.xlsx,Orders,31,Quantity,Completed with no quantity (required_if_list),,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,32,Unit Price,thousands comma in number,"1,250",standardised -> 1250.0
+Cafe_Orders_A.xlsx,Orders,33,Item,dropdown value in wrong case,juice,standardised -> Juice
+Cafe_Orders_A.xlsx,Orders,38,Order Status,blank mandatory status,,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,40,Order ID,blank ID with ref in Notes,,standardised -> ORD-00037
+Cafe_Orders_A.xlsx,Orders,42,Order Status,blank mandatory status,,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,49,Unit Price,non-numeric price,ERROR,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,58,Unit Price,thousands comma in number,"1,250",standardised -> 1250.0
+Cafe_Orders_A.xlsx,Orders,65,Payment Method,value not in dropdown,IOU,flagged 00FFFF
+Cafe_Orders_A.xlsx,Orders,69,Order Date,blank mandatory date,,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,71,Order Date,blank mandatory date,,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,72,Unit Price,non-numeric price,£ TBC,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,77,Quantity,Cancelled with a quantity (blanks_or_zero_list),3,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,78,Order ID,blank ID with ref in Notes,,standardised -> ORD-00075
+Cafe_Orders_A.xlsx,Orders,85,Refund Date,Refunded with no refund date (required_if),,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,87,Quantity,quantity outside 0-50,999,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,92,Unit Price,non-numeric price,£ TBC,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,93,Quantity,Completed with no quantity (required_if_list),,flagged FFEA00
+Cafe_Orders_A.xlsx,Orders,96,Quantity,non-numeric quantity,three,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,97,Order Date,date outside plausible range,12/12/1985,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,99,Order Date,date outside plausible range,01/01/2099,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,105,Payment Method,value not in dropdown,IOU,flagged 00FFFF
+Cafe_Orders_A.xlsx,Orders,113,Order Date,date outside plausible range,12/12/1985,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,115,Refund Date,refund date before order date (date_not_before),2024/07/15,flagged 50C878
+Cafe_Orders_A.xlsx,Orders,131,Item Category,dropdown variant,beverage,standardised -> Drink
+Cafe_Orders_A.xlsx,Orders,137,Order Date,alternative date format,2025-08-26 00:00:00,standardised -> 2025/08/26
+Cafe_Orders_A.xlsx,Orders,145,Payment Method,dropdown variant,cc,standardised -> Card
+Cafe_Orders_B.xlsx,Store Details,3,Store Name (B3),store not in dropdown,Hackney Cafe,flagged 00FFFF
+Cafe_Orders_B.xlsx,Orders,4,Refund Date,refund date before order date (date_not_before),2023/03/08,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,7,Order Date,unparseable / impossible date,last Tuesday,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,9,Quantity,number stored as text with spaces, 5 ,standardised -> 5.0
+Cafe_Orders_B.xlsx,Orders,12,Order ID,"blank ID, nothing to salvage",,flagged FFEA00
+Cafe_Orders_B.xlsx,Orders,13,Item,dropdown value in wrong case,cookie,standardised -> Cookie
+Cafe_Orders_B.xlsx,Orders,15,Quantity,quantity outside 0-50,-2,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,16,Payment Method,value not in dropdown,IOU,flagged 00FFFF
+Cafe_Orders_B.xlsx,Orders,22,Quantity,number stored as text with spaces, 3 ,standardised -> 3.0
+Cafe_Orders_B.xlsx,Orders,23,Quantity,Cancelled with a quantity (blanks_or_zero_list),4,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,26,Item,Drink item under Food category (dropdown_dependency),Juice,flagged 00FFFF
+Cafe_Orders_B.xlsx,Orders,32,Refund Date,refund date before order date (date_not_before),2023/03/09,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,48,Item,Drink item under Food category (dropdown_dependency),Tea,flagged 00FFFF
+Cafe_Orders_B.xlsx,Orders,49,Order ID,blank ID with ref in Notes,,standardised -> ORD-00196
+Cafe_Orders_B.xlsx,Orders,51,Order Status,dropdown variant,COMPLETED,standardised -> Completed
+Cafe_Orders_B.xlsx,Orders,54,Payment Method,dropdown variant,apple pay,standardised -> Digital Wallet
+Cafe_Orders_B.xlsx,Orders,57,Quantity,Cancelled with a quantity (blanks_or_zero_list),1,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,61,Order Status,blank mandatory status,,flagged FFEA00
+Cafe_Orders_B.xlsx,Orders,62,Quantity,Completed with no quantity (required_if_list),,flagged FFEA00
+Cafe_Orders_B.xlsx,Orders,66,Quantity,non-numeric quantity,2 cups,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,67,Order ID,messy ID format,ORD 214,standardised -> ORD-00214
+Cafe_Orders_B.xlsx,Orders,70,Quantity,quantity outside 0-50,999,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,84,Payment Method,value not in dropdown,IOU,flagged 00FFFF
+Cafe_Orders_B.xlsx,Orders,85,Quantity,non-numeric quantity,2 cups,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,87,Order ID,messy ID format,ord_0234,standardised -> ORD-00234
+Cafe_Orders_B.xlsx,Orders,97,Refund Date,Refunded with no refund date (required_if),,flagged FFEA00
+Cafe_Orders_B.xlsx,Orders,101,Order Date,date outside plausible range,1999-05-01,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,102,Customer Email,malformed email,customer249@example,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,103,Refund Date,Refunded with no refund date (required_if),,flagged FFEA00
+Cafe_Orders_B.xlsx,Orders,105,Order ID,"blank ID, nothing to salvage",,flagged FFEA00
+Cafe_Orders_B.xlsx,Orders,106,Quantity,Cancelled with a quantity (blanks_or_zero_list),2,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,113,Order ID,blank ID with ref in Notes,,standardised -> ORD-00260
+Cafe_Orders_B.xlsx,Orders,114,Quantity,number stored as text with spaces, 4 ,standardised -> 4.0
+Cafe_Orders_B.xlsx,Orders,116,Payment Method,dropdown variant,cc,standardised -> Card
+Cafe_Orders_B.xlsx,Orders,120,Item Category,dropdown variant,drinks,standardised -> Drink
+Cafe_Orders_B.xlsx,Orders,130,Order ID,messy ID format,#ord-277,standardised -> ORD-00277
+Cafe_Orders_B.xlsx,Orders,131,Quantity,quantity outside 0-50,999,flagged 50C878
+Cafe_Orders_B.xlsx,Orders,132,Quantity,number stored as text with spaces, 5 ,standardised -> 5.0
+Cafe_Orders_B.xlsx,Orders,144,Item Category,dropdown variant,beverage,standardised -> Drink
+Cafe_Orders_B.xlsx,Orders,148,Order ID,blank ID with ref in Notes,,standardised -> ORD-00295
+Cafe_Orders_B.xlsx,Orders,150,Item,dropdown value in wrong case,cookie,standardised -> Cookie
+Cafe_Orders_B.xlsx,Orders,152,Payment Method,value not in dropdown,Bitcoin,flagged 00FFFF
+Cafe_Orders_B.xlsx,Orders,153,Item,Drink item under Food category (dropdown_dependency),Coffee,flagged 00FFFF
